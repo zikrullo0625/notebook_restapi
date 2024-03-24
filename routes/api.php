@@ -15,8 +15,8 @@ use App\Http\Controllers\Api\NotebookController;
 |
 */
 
-Route::get('note/{id}', [NotebookController::class, 'show']);
-Route::get('note', [NotebookController::class, 'index']);
-Route::post('note', [NotebookController::class, 'store']);
-Route::put('note/{id}', [NotebookController::class, 'update']);
-Route::delete('note/{id}', [NotebookController::class, 'destroy']);
+Route::get('notebook', [NotebookController::class, 'index']);
+Route::post('notebook', [NotebookController::class, 'store']);
+Route::get('notebook/{note}', [NotebookController::class, 'show']);
+Route::put('notebook/{note}', [NotebookController::class, 'update']);
+Route::delete('notebook/{note}', [NotebookController::class, 'destroy']);
