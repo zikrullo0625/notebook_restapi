@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "8dffa89d-983f-44a1-abb0-c5b99d548afc",
+		"name": "tasks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "task.list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://task.loc/api/tasks",
+					"protocol": "http",
+					"host": [
+						"task",
+						"loc"
+					],
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task.show",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    name: \"Test task\",\r\n    description: \"Test description\",\r\n}"
+				},
+				"url": {
+					"raw": "http://task.loc/api/tasks/1",
+					"protocol": "http",
+					"host": [
+						"task",
+						"loc"
+					],
+					"path": [
+						"api",
+						"tasks",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task.create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Test task\",\r\n    \"description\": \"Test description\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://task.loc/api/tasks",
+					"protocol": "http",
+					"host": [
+						"task",
+						"loc"
+					],
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task.update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Test task 2\",\r\n    \"description\": \"Test description 2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://task.loc/api/tasks/2",
+					"protocol": "http",
+					"host": [
+						"task",
+						"loc"
+					],
+					"path": [
+						"api",
+						"tasks",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task.delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    name: \"Test task\",\r\n    description: \"Test description\",\r\n}"
+				},
+				"url": {
+					"raw": "http://task.loc/api/tasks/2",
+					"protocol": "http",
+					"host": [
+						"task",
+						"loc"
+					],
+					"path": [
+						"api",
+						"tasks",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
